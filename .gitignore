@@ -7,7 +7,5 @@ package-lock.json
 coverage
 typings
 .history
-.idea
-*.iml
 test/e2e/screenshots
 .yo-rc.json
