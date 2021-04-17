@@ -55,7 +55,17 @@
     "hmr": "auto"
   },
   "eslintConfig": {
-    "extends": "@wix/eslint-config-yoshi"
+    "extends": "@wix/eslint-config-yoshi",
+    "overrides": [
+      {
+        "files": [
+          "*.spec.*"
+        ],
+        "rules": {
+          "@typescript-eslint/no-shadow": "off"
+        }
+      }
+    ]
   },
   "wix": {
     "artifact": {
