@@ -21,7 +21,8 @@ const articleDataHooks = dataHooks<{
   description;
   author: { id: string }
 }>('article');
-// data hooks is a JavaScript Proxy,
+
+// dataHooks creates a JavaScript Proxy,
 // so you do not need to pass the keys, types are enought
 ```
 
