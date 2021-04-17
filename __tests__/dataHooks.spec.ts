@@ -26,6 +26,11 @@ describe('Data hooks creator', () => {
     expect(hooks.elem({ slug: '' })).toEqual('cmp__elem elem--slug_');
   });
 
+  it('should not add options if not passed', () => {
+    const hooks = dataHooks<{ elem: { slug: string } }>('cmp');
+    expect(hooks.elem()).toEqual('cmp__elem');
+  });
+
   describe('Negative values', () => {
     it('should omit null option values', () => {
       const hooks = dataHooks<{ elem: { active: null } }>('cmp');
