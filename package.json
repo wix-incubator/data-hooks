@@ -31,11 +31,14 @@
     "*.{js,ts}": "yoshi lint"
   },
   "devDependencies": {
+    "@testing-library/react": "^11.2.6",
     "@types/jest": "^26.0.15",
     "@types/node": "^14.0.0",
+    "@types/react": "^17.0.3",
     "@wix/yoshi": "^5.0.0",
     "husky": "~4.2.1",
     "lint-staged": "^10.0.7",
+    "react": "^17.0.2",
     "ts-jest": "^26.4.4",
     "typescript": "~4.1.2"
   },
