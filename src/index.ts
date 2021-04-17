@@ -1,3 +1,2 @@
-import Counter from './counter';
-
-export default new Counter();
+export { dataHooks } from './dataHooks';
+export { withDataHooks } from './withDataHooks';
