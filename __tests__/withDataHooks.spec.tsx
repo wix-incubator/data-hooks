@@ -37,4 +37,15 @@ describe('Data hooks HOC', () => {
     render(<WrappedCmp dataHook="parent-data-hook" />);
     expect(Cmp).toBeCalled();
   });
+
+  it('should keep generator behavior', () => {
+    Cmp.mockImplementation((props) => {
+      expect(props.dataHooks.elem({ key: 'value' })).toEqual(
+        'cmp__elem elem--key_value',
+      );
+      return null;
+    });
+    render(<WrappedCmp />);
+    expect(Cmp).toBeCalled();
+  });
 });
