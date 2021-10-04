@@ -6,3 +6,4 @@ export {
   DataHooksGenerator,
   WithDataHooks,
 } from './types';
+export { byDataHook } from './byDataHook';
