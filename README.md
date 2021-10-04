@@ -10,7 +10,16 @@ Use the generator to share your dataHooks between components, drivers and tests
 npm install @wix/data-hooks --save-dev
 ```
 
-## Simple Usage (without HOC)
+## What is inside
+
+* `dataHooks()` — data-hooks generator. [Examples](./__tests__/dataHooks.spec.ts)
+* `byDataHook()` — build CSS selector to find element by `data-hook` html attribute. [Examples](./__tests__/byDataHook.spec.ts)
+* `withDataHooks()` – React HOC to wrap your component to pass `dataHooks` with `root` element generator as a prop. [Examples](./__tests__/withDataHooks.spec.tsx)
+* `useDataHooks()` – React hook to get `dataHooks` generator. [Examples](./__tests__/useDataHooks.spec.tsx)
+
+## Basic Usage (without HOC)
+
+> See the example source code [here](./examples/basic)
 
 ```typescript
 // Article.dataHooks.ts
@@ -67,7 +76,7 @@ describe('<Article/>', () => {
         ]}
       />
     )
-    const selector = `[data-hook~="${articleDataHooks.article()}"]`;
+    const selector = `[data-hook~="${articleDataHooks.author()}"]`;
     expect(result.baseElement.querySelectorAll(selector)).toHaveLength(2);
   })
 })

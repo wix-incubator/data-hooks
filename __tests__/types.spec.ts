@@ -34,6 +34,14 @@ describe('Types', () => {
       });
     });
 
+    // it('should not require any params if no options', () => {
+    //   const hooksWithroot = dataHooks<{ elem }>('cmp');
+    //   withDataHooks(hooksWithroot)(({ dataHooks }) => {
+    //     dataHooks.elem();
+    //     return null;
+    //   });
+    // });
+
     it('should require params for root if such exists in data hooks', () => {
       const hooksWithRoot = dataHooks<{ root: { key: string } }>('cmp');
       withDataHooks(hooksWithRoot)(({ dataHooks }) => {

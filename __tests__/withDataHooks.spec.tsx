@@ -1,13 +1,10 @@
-import { dataHooks, withDataHooks } from '../src';
+import { dataHooks, withDataHooks, WithDataHooks } from '../src';
 import React from 'react';
 import { render } from '@testing-library/react';
-import { WithDataHooks } from '../src/types';
 
 describe('Data hooks HOC', () => {
   const cmpDataHooks = dataHooks('cmp');
-  const Cmp = jest.fn(
-    (() => null) as React.FC<WithDataHooks<typeof cmpDataHooks>>,
-  );
+  const Cmp = jest.fn((() => null) as React.FC<WithDataHooks<typeof cmpDataHooks>>);
   const WrappedCmp = withDataHooks(cmpDataHooks)(Cmp);
 
   beforeEach(() => Cmp.mockClear());
@@ -40,9 +37,7 @@ describe('Data hooks HOC', () => {
 
   it('should keep generator behavior', () => {
     Cmp.mockImplementation((props) => {
-      expect(props.dataHooks.elem({ key: 'value' })).toEqual(
-        'cmp__elem elem--key_value',
-      );
+      expect(props.dataHooks.elem({ key: 'value' })).toEqual('cmp__elem elem--key_value');
       return null;
     });
     render(<WrappedCmp />);
