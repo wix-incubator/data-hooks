@@ -15,7 +15,8 @@
     "strict": true
   },
   "include": [
-    "./__tests__/**/*.ts"
+    "./__tests__/**/*.tsx?",
+    "./examples/**/*.tsx?"
   ],
   "files": [
     "./src/index.ts"

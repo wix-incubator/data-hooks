@@ -20,8 +20,8 @@
     "start": "yoshi start",
     "build": "yoshi build",
     "test": "yoshi test",
-    "lint": "yoshi lint",
-    "posttest": "npm run lint"
+    "posttest": "npm run lint",
+    "lint": "yoshi lint"
   },
   "husky": {
     "hooks": {
@@ -68,6 +68,9 @@
         }
       }
     ]
+  },
+  "prettier": {
+    "printWidth": 120
   },
   "wix": {
     "artifact": {
