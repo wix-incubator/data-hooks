@@ -3,7 +3,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 
 describe('Data hooks HOC', () => {
-  const cmpDataHooks = dataHooks('cmp');
+  const cmpDataHooks = dataHooks<{ elem: { key: string } }>('cmp');
   const Cmp = jest.fn((() => null) as React.FC<WithDataHooks<typeof cmpDataHooks>>);
   const WrappedCmp = withDataHooks(cmpDataHooks)(Cmp);
 
@@ -62,20 +62,20 @@ describe('Data hooks HOC', () => {
       });
     });
 
+    it('should not require any params if no options', () => {
+      const hooksWithBase = dataHooks<{ elem: {} }>('cmp');
+      withDataHooks(hooksWithBase)(({ dataHooks }) => {
+        dataHooks.elem();
+        return null;
+      });
+    });
+
     it('should not require any params for base', () => {
       withDataHooks(hooks)(({ dataHooks }) => {
         dataHooks.base();
         return null;
       });
     });
-
-    // it('should not require any params if no options', () => {
-    //   const hooksWithBase = dataHooks<{ elem }>('cmp');
-    //   withDataHooks(hooksWithBase)(({ dataHooks }) => {
-    //     dataHooks.elem();
-    //     return null;
-    //   });
-    // });
 
     it('should require params for base if such exists in data hooks', () => {
       const hooksWithBase = dataHooks<{ base: { key: string } }>('cmp');
