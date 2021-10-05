@@ -3,9 +3,9 @@ import { dataHooks, useDataHooks } from '../src';
 describe('useDataHooks hook', () => {
   const cmpDataHooks = dataHooks('cmp');
 
-  it('should pass dataHook prop as dataHooks.root()', () => {
+  it('should pass dataHook prop as dataHooks.base()', () => {
     const { dataHooks } = useDataHooks(cmpDataHooks, 'parent-data-hook');
-    expect(dataHooks.root()).toEqual('parent-data-hook cmp__root');
+    expect(dataHooks.base()).toEqual('parent-data-hook cmp__base');
   });
 
   it('should keep generator behavior', () => {

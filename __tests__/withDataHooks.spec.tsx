@@ -26,9 +26,9 @@ describe('Data hooks HOC', () => {
     expect(Cmp).toBeCalled();
   });
 
-  it('should pass dataHook prop as dataHooks.root()', () => {
+  it('should pass dataHook prop as dataHooks.base()', () => {
     Cmp.mockImplementation((props) => {
-      expect(props.dataHooks.root()).toEqual('parent-data-hook cmp__root');
+      expect(props.dataHooks.base()).toEqual('parent-data-hook cmp__base');
       return null;
     });
     render(<WrappedCmp dataHook="parent-data-hook" />);
