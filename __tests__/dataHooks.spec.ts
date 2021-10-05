@@ -47,4 +47,22 @@ describe('Data hooks creator', () => {
       expect(hooks.elem({ active: false })).toEqual('cmp__elem');
     });
   });
+
+  describe('types', () => {
+    const hooks = dataHooks<{ elem: { one: string; two: string } }>('cmp');
+
+    it('should allow to pass not all params', () => {
+      hooks.elem({ one: 'value' });
+      hooks.elem();
+    });
+
+    it('should not allow to pass not defined params', () => {
+      // @ts-expect-error
+      hooks.elem({ three: 'bla' });
+      // @ts-expect-error
+      hooks.elem({ one: 0 });
+      // @ts-expect-error
+      hooks.nonEsists({});
+    });
+  });
 });
