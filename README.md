@@ -14,7 +14,7 @@ npm install @wix/data-hooks --save-dev
 
 * `dataHooks()` — data-hooks generator. [Examples](./__tests__/dataHooks.spec.ts)
 * `byDataHook()` — build CSS selector to find element by `data-hook` html attribute. [Examples](./__tests__/byDataHook.spec.ts)
-* `withDataHooks()` – React HOC to wrap your component to pass `dataHooks` with `root` element generator as a prop. [Examples](./__tests__/withDataHooks.spec.tsx)
+* `withDataHooks()` – React HOC to wrap your component to pass `dataHooks` with `base` element generator as a prop. [Examples](./__tests__/withDataHooks.spec.tsx)
 * `useDataHooks()` – React hook to get `dataHooks` generator. [Examples](./__tests__/useDataHooks.spec.tsx)
 * `dataHooksFinder()` – Find [UniDriver](https://github.com/wix-incubator/unidriver) elements by `data-hook` attribute.
 

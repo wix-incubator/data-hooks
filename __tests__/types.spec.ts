@@ -27,31 +27,31 @@ describe('Types', () => {
       });
     });
 
-    it('should not require any params for root', () => {
+    it('should not require any params for base', () => {
       withDataHooks(hooks)(({ dataHooks }) => {
-        dataHooks.root();
+        dataHooks.base();
         return null;
       });
     });
 
     // it('should not require any params if no options', () => {
-    //   const hooksWithroot = dataHooks<{ elem }>('cmp');
-    //   withDataHooks(hooksWithroot)(({ dataHooks }) => {
+    //   const hooksWithBase = dataHooks<{ elem }>('cmp');
+    //   withDataHooks(hooksWithBase)(({ dataHooks }) => {
     //     dataHooks.elem();
     //     return null;
     //   });
     // });
 
-    it('should require params for root if such exists in data hooks', () => {
-      const hooksWithRoot = dataHooks<{ root: { key: string } }>('cmp');
-      withDataHooks(hooksWithRoot)(({ dataHooks }) => {
-        dataHooks.root({ key: 'value' });
+    it('should require params for base if such exists in data hooks', () => {
+      const hooksWithBase = dataHooks<{ base: { key: string } }>('cmp');
+      withDataHooks(hooksWithBase)(({ dataHooks }) => {
+        dataHooks.base({ key: 'value' });
 
         // @ts-expect-error
-        dataHooks.root({});
+        dataHooks.base({});
 
         // @ts-expect-error
-        dataHooks.root();
+        dataHooks.base();
         return null;
       });
     });
