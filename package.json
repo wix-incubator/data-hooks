@@ -36,6 +36,8 @@
     "@types/jest": "^26.0.15",
     "@types/node": "^14.0.0",
     "@types/react": "^17.0.3",
+    "@unidriver/core": "^1.2.3",
+    "@unidriver/jsdom-react": "^1.6.3",
     "@wix/yoshi": "^5.0.0",
     "husky": "~4.2.1",
     "lint-staged": "^10.0.7",

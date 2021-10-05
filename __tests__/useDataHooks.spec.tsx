@@ -1,5 +1,4 @@
-import { dataHooks } from '../src';
-import { useDataHooks } from '../src/useDataHooks';
+import { dataHooks, useDataHooks } from '../src';
 
 describe('useDataHooks hook', () => {
   const cmpDataHooks = dataHooks('cmp');
@@ -11,8 +10,6 @@ describe('useDataHooks hook', () => {
 
   it('should keep generator behavior', () => {
     const { dataHooks } = useDataHooks(cmpDataHooks, 'parent-data-hook');
-    expect(dataHooks.elem({ key: 'value' })).toEqual(
-      'cmp__elem elem--key_value',
-    );
+    expect(dataHooks.elem({ key: 'value' })).toEqual('cmp__elem elem--key_value');
   });
 });

@@ -13,7 +13,5 @@ type CmpDataHooksGenerator<T extends DataHooksGenerator<any>> = {
 };
 
 export type WithDataHooks<T extends DataHooksGenerator<any>> = {
-  dataHooks: T extends { root: any }
-    ? CmpDataHooksGenerator<T>
-    : CmpDataHooksGenerator<T> & { root: () => string };
+  dataHooks: T extends { root: any } ? CmpDataHooksGenerator<T> : CmpDataHooksGenerator<T> & { root: () => string };
 };
