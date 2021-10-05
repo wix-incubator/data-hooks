@@ -1,13 +1,15 @@
 import React from 'react';
 import { useDataHooks } from './useDataHooks';
-import { DataHooks } from './dataHooks';
+import { DataHookElements, DataHooks } from './dataHooks';
 
-type CmpDataHooksGenerator<T extends DataHooks<any>> = {
-  [Elem in keyof T]: (options: Required<Parameters<T[Elem]>[0]>) => string;
+type DataHookElementsFromDH<T extends DataHooks<any>> = T extends DataHooks<infer Item> ? Item : never;
+
+type CmpDataHooksGenerator<T extends DataHookElements> = {
+  [Elem in keyof T]: keyof T[Elem] extends never ? () => string : (options: T[Elem]) => string;
 };
 
 export type WithDataHooks<T extends DataHooks<any>> = {
-  dataHooks: T extends { base: any } ? CmpDataHooksGenerator<T> : CmpDataHooksGenerator<T> & { base: () => string };
+  dataHooks: CmpDataHooksGenerator<{ base: {} } & DataHookElementsFromDH<T>>;
 };
 
 export function withDataHooks<T extends DataHooks<any>>(dataHooks: T) {
