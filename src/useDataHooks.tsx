@@ -1,6 +1,7 @@
-import { DataHooksGenerator, WithDataHooks } from './types';
+import { WithDataHooks } from './withDataHooks';
+import { DataHooks } from './dataHooks';
 
-export function useDataHooks<T extends DataHooksGenerator<any>>(dataHooks: T, baseDataHook?: string): WithDataHooks<T> {
+export function useDataHooks<T extends DataHooks<any>>(dataHooks: T, baseDataHook?: string): WithDataHooks<T> {
   return {
     // @ts-expect-error
     dataHooks: new Proxy<T>(dataHooks, {
@@ -8,8 +9,7 @@ export function useDataHooks<T extends DataHooksGenerator<any>>(dataHooks: T, ba
         if (elem === 'base') {
           return (options) => (baseDataHook ? `${baseDataHook} ` : '') + target.base(options);
         }
-        // @ts-expect-error
-        return target[elem];
+        return target[elem as string];
       },
     }),
   };

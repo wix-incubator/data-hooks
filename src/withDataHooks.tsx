@@ -13,9 +13,11 @@ export type WithDataHooks<T extends DataHooks<any>> = {
 };
 
 export function withDataHooks<T extends DataHooks<any>>(dataHooks: T) {
-  return <Props extends WithDataHooks<T>>(
+  return <Props extends WithDataHooks<T> & { dataHook?: string }>(
     Cmp: React.ComponentType<Props>,
-  ): React.FC<{ dataHook?: string } & Omit<Props, 'dataHooks'>> => (props) => (
-    <Cmp {...props} {...useDataHooks(dataHooks, props.dataHook)} />
-  );
+  ): React.FC<Omit<Props, keyof WithDataHooks<T>>> => (props) => {
+    const result = useDataHooks(dataHooks, props.dataHook);
+    // @ts-expect-error
+    return <Cmp {...props} dataHooks={result.dataHooks} />;
+  };
 }
