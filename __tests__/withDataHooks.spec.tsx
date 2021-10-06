@@ -4,7 +4,7 @@ import { render } from '@testing-library/react';
 
 describe('Data hooks HOC', () => {
   const cmpDataHooks = dataHooks<{ elem: { key: string } }>('cmp');
-  const Cmp = jest.fn((() => null) as React.FC<WithDataHooks<typeof cmpDataHooks>>);
+  const Cmp = jest.fn((() => null) as React.FC<WithDataHooks<typeof cmpDataHooks> & { dataHook?: string }>);
   const WrappedCmp = withDataHooks(cmpDataHooks)(Cmp);
 
   beforeEach(() => Cmp.mockClear());
