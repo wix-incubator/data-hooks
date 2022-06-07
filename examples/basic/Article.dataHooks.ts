@@ -1,4 +1,4 @@
-import { dataHooks } from '../..';
+import { dataHooks } from '../../src';
 // In your project:
 // import { dataHooks } from '@wix/data-hooks';
 

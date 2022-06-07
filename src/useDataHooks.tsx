@@ -3,7 +3,6 @@ import { DataHooks } from './dataHooks';
 
 export function useDataHooks<T extends DataHooks<any>>(dataHooks: T, baseDataHook?: string): WithDataHooks<T> {
   return {
-    // @ts-expect-error
     dataHooks: new Proxy<T>(dataHooks, {
       get(target: T, elem: PropertyKey): any {
         if (elem === 'base') {
