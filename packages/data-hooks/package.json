@@ -13,15 +13,11 @@
     "dist"
   ],
   "scripts": {
+    "pre-commit": "lint-staged",
     "build": "rimraf dist/ && tsc",
     "test": "jest",
     "posttest": "npm run lint",
     "lint": "eslint ./src"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "*.{js,ts}": "npm run lint -- --fix"
@@ -36,7 +32,6 @@
     "@unidriver/core": "^1.2.3",
     "@unidriver/jsdom-react": "^1.6.3",
     "eslint": "^8.17.0",
-    "husky": "~4.2.1",
     "jest": "^28.1.1",
     "jest-environment-jsdom": "^28.1.1",
     "lint-staged": "^10.0.7",
