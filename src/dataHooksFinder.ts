@@ -14,7 +14,7 @@ export function dataHooksFinder<T, DH extends DataHookElements>(
   base: UniDriver<T>,
   dataHooks: DataHooks<DH>,
 ): DataHooksFinder<T, DH> {
-  // @ts-expect-error
+  // @ts-expect-error we set handler on an empty object
   return new Proxy(dataHooks, {
     get(obj, element) {
       return {

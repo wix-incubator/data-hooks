@@ -9,6 +9,7 @@ type CmpDataHooksGenerator<T extends DataHookElements> = {
 };
 
 export type WithDataHooks<T extends DataHooks<any>> = {
+  // eslint-disable-next-line
   dataHooks: CmpDataHooksGenerator<{ base: {} } & DataHookElementsFromDH<T>>;
 };
 
@@ -17,7 +18,7 @@ export function withDataHooks<T extends DataHooks<any>>(dataHooks: T) {
     Cmp: React.ComponentType<Props>,
   ): React.FC<Omit<Props, keyof WithDataHooks<T>>> => (props) => {
     const result = useDataHooks(dataHooks, props.dataHook);
-    // @ts-expect-error
+    // @ts-expect-error TODO: need to investigate why we have error here
     return <Cmp {...props} dataHooks={result.dataHooks} />;
   };
 }
