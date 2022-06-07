@@ -1,0 +1,17 @@
+{
+  "name": "data-hooks-monorepo",
+  "packageManager": "yarn@3.1.1",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "prepare": "husky install",
+    "build": "yarn workspaces foreach -v run build",
+    "test": "yarn workspaces foreach -v run test",
+    "lint": "yarn workspaces foreach run lint"
+  },
+  "devDependencies": {
+    "husky": "^8.0.1"
+  }
+}
