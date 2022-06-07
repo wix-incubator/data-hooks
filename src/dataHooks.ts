@@ -9,6 +9,7 @@ export type DataHookElements = {
 };
 
 export function dataHooks<T extends DataHookElements>(componentName: string): DataHooks<T> {
+  // @ts-expect-error
   return new Proxy({}, handler<T>(componentName));
 }
 
