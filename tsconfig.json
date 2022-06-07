@@ -12,7 +12,8 @@
     "target": "es5",
     "jsx": "react",
     "lib": ["dom", "esnext"],
-    "strict": true
+    "strict": true,
+    "skipLibCheck": true
   },
   "include": [
     "./__tests__/**/*.tsx?",
