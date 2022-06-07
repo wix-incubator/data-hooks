@@ -20,7 +20,7 @@
     "build": "rimraf dist/ && tsc",
     "test": "jest",
     "posttest": "npm run lint",
-    "lint": "yoshi lint"
+    "lint": "eslint ./src"
   },
   "husky": {
     "hooks": {
@@ -28,16 +28,18 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts}": "yoshi lint"
+    "*.{js,ts}": "npm run lint -- --fix"
   },
   "devDependencies": {
     "@testing-library/react": "^11.2.6",
     "@types/jest": "^28.1.1",
     "@types/node": "^14.0.0",
     "@types/react": "^17.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
     "@unidriver/core": "^1.2.3",
     "@unidriver/jsdom-react": "^1.6.3",
-    "@wix/yoshi": "^5.0.0",
+    "eslint": "^8.17.0",
     "husky": "~4.2.1",
     "jest": "^28.1.1",
     "jest-environment-jsdom": "^28.1.1",
@@ -61,24 +63,22 @@
       "<rootDir>/node_modules/"
     ]
   },
-  "yoshi": {
-    "hmr": "auto"
-  },
   "eslintConfig": {
-    "extends": "@wix/eslint-config-yoshi",
-    "overrides": [
-      {
-        "files": [
-          "*.spec.*"
-        ],
-        "rules": {
-          "@typescript-eslint/no-shadow": "off"
-        }
-      }
-    ]
-  },
-  "prettier": {
-    "printWidth": 120
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
+    "rules": {
+      "@typescript-eslint/no-shadow": "off",
+      "@typescript-eslint/no-explicit-any": "off"
+    }
   },
   "wix": {
     "artifact": {
