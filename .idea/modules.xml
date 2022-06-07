@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/data-hooks.iml" filepath="$PROJECT_DIR$/data-hooks.iml" />
-      <module fileurl="file://$PROJECT_DIR$/examples/examples.iml" filepath="$PROJECT_DIR$/examples/examples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/packages/data-hooks/data-hooks.iml" filepath="$PROJECT_DIR$/packages/data-hooks/data-hooks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/data-hooks-monorepo.iml" filepath="$PROJECT_DIR$/data-hooks-monorepo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/packages/data-hooks/examples/examples.iml" filepath="$PROJECT_DIR$/packages/data-hooks/examples/examples.iml" />
     </modules>
   </component>
 </project>
