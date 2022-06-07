@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
-      <module name="data-hooks" target="1.5" />
+      <module name="data-hooks-monorepo" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
