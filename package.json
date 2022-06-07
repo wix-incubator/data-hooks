@@ -7,8 +7,8 @@
     "email": "romansh@wix.com"
   },
   "homepage": "https://github.com/wix-private/data-hooks",
-  "main": "dist/src/index.js",
-  "module": "dist/es/src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "files": [
     "dist"
   ],
@@ -17,8 +17,7 @@
     "versionBumpStrategy": "minor"
   },
   "scripts": {
-    "start": "yoshi start",
-    "build": "yoshi build",
+    "build": "rimraf dist/ && tsc",
     "test": "yoshi test",
     "posttest": "npm run lint",
     "lint": "yoshi lint"
@@ -43,6 +42,7 @@
     "lint-staged": "^10.0.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "rimraf": "^3.0.2",
     "ts-jest": "^26.4.4",
     "typescript": "~4.1.2"
   },
@@ -79,8 +79,5 @@
       "groupId": "com.wixpress",
       "artifactId": "data-hooks"
     }
-  },
-  "wallaby": {
-    "autoDetect": true
   }
 }
