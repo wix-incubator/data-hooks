@@ -1,5 +1,5 @@
 import { WithDataHooks } from './withDataHooks';
-import { DataHooks } from './dataHooks';
+import { DataHooks } from '@wix/data-hooks';
 
 export function useDataHooks<T extends DataHooks<any>>(dataHooks: T, baseDataHook?: string): WithDataHooks<T> {
   return {
