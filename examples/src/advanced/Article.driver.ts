@@ -1,9 +1,9 @@
 import { UniDriver } from '@unidriver/core';
-import { dataHooksFinder } from '@wix/data-hooks-unidriver';
+import { createFinders } from '@wix/data-hooks-unidriver';
 import { articleDataHooks } from './Article.dataHooks';
 
 export const ArticleDriver = <T>(base: UniDriver<T>) => {
-  const { title, description, author } = dataHooksFinder(base, articleDataHooks);
+  const { title, description, author } = createFinders(base, articleDataHooks);
 
   return {
     getTitle: () => title.find().text(),

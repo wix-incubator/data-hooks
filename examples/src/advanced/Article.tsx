@@ -10,7 +10,7 @@ type ArticleProps = {
 };
 
 export const Article: React.FC<ArticleProps> = ({ dataHook, title, description, authorsList }) => {
-  const { dataHooks } = useDataHooks(articleDataHooks);
+  const dataHooks = useDataHooks(articleDataHooks);
 
   return (
     <article data-hook={dataHook}>

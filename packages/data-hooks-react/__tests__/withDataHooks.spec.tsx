@@ -1,6 +1,6 @@
-import React from 'react';
-import { withDataHooks, WithDataHooks } from '../src';
+import * as React from 'react';
 import { render } from '@testing-library/react';
+import { withDataHooks, WithDataHooks } from '../src';
 import { dataHooks } from '@wix/data-hooks';
 
 describe('Data hooks HOC', () => {
@@ -16,13 +16,14 @@ describe('Data hooks HOC', () => {
   });
 
   it('should pass all props as it is', () => {
-    const props = { a: 'string', b: { key: 'object-value' }, fn: () => {} };
+    const props = { a: 'string', b: { key: 'object-value' }, fn: () => void 0 };
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     Cmp.mockImplementation(({ dataHooks, ...restProps }) => {
       expect(restProps).toEqual(props);
       return null;
     });
-    // @ts-expect-error
+    // @ts-expect-error we pass more props than is in the type
     render(<WrappedCmp {...props} />);
     expect(Cmp).toBeCalled();
   });
@@ -48,22 +49,23 @@ describe('Data hooks HOC', () => {
   describe('types', () => {
     const hooks = dataHooks<{ elem: { one: string; two: string } }>('cmp');
     it('should force to pass all params', () => {
-      withDataHooks(hooks)(({ dataHooks }) => {
+      withDataHooks(hooks)(({dataHooks} ) => {
         dataHooks.elem({ one: 'value', two: 'value' });
 
-        // @ts-expect-error
+        // @ts-expect-error all elements are required
         dataHooks.elem({ one: 'value' });
 
-        // @ts-expect-error
+        // @ts-expect-error all elements are required
         dataHooks.elem({});
 
-        // @ts-expect-error
+        // @ts-expect-error options are required
         dataHooks.elem();
         return null;
       });
     });
 
     it('should not require any params if no options', () => {
+      // eslint-disable-next-line @typescript-eslint/ban-types
       const hooksWithBase = dataHooks<{ elem: {} }>('cmp');
       withDataHooks(hooksWithBase)(({ dataHooks }) => {
         dataHooks.elem();
@@ -83,10 +85,10 @@ describe('Data hooks HOC', () => {
       withDataHooks(hooksWithBase)(({ dataHooks }) => {
         dataHooks.base({ key: 'value' });
 
-        // @ts-expect-error
+        // @ts-expect-error options should have all elements
         dataHooks.base({});
 
-        // @ts-expect-error
+        // @ts-expect-error options are required if any
         dataHooks.base();
         return null;
       });

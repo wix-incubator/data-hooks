@@ -15,10 +15,6 @@
     "strict": true,
     "skipLibCheck": true
   },
-  "include": [
-    "./__tests__/**/*.tsx?",
-    "./examples/**/*.tsx?"
-  ],
   "files": [
     "./src/index.ts"
   ]
