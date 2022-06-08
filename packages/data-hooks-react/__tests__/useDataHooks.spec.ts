@@ -1,5 +1,5 @@
 import { renderHook } from '@testing-library/react-hooks';
-import { dataHooks } from '@wix/data-hooks';
+import { dataHooks } from 'data-hooks';
 import { useDataHooks } from '../src';
 
 

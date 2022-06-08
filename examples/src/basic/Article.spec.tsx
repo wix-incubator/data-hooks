@@ -2,7 +2,7 @@ import React from 'react';
 import { render, RenderResult } from '@testing-library/react';
 import { Article } from './Article';
 import { articleDataHooks } from './Article.dataHooks';
-import { byDataHook } from '@wix/data-hooks';
+import { byDataHook } from 'data-hooks';
 
 describe('<Article/>', () => {
   it('should render title', () => {

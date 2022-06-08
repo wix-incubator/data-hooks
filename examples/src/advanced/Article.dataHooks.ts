@@ -1,4 +1,4 @@
-import { dataHooks } from '@wix/data-hooks';
+import { dataHooks } from 'data-hooks';
 
 export const articleDataHooks = dataHooks<{
   title: {};

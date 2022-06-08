@@ -7,26 +7,26 @@ Use the generator to share your dataHooks between components, drivers and tests
 ## Install
 
 ```bash
-npm install @wix/data-hooks --save-dev
+npm install data-hooks --save-dev
 
 # If you need `withDataHooks()` HOC or `useDataHooks()` React Hooks
-npm install @wix/data-hooks-react --save-dev
+npm install data-hooks-react --save-dev
 
 # If you need UniDriver finders
-npm install @wix/data-hooks-unidriver --save-dev
+npm install data-hooks-unidriver --save-dev
 ```
 
 ## What is inside
 
-### `@wix/data-hooks`
+### `data-hooks`
 * `dataHooks()` — creates data-hooks generator. [Examples](./packages/data-hooks/__tests__/dataHooks.spec.ts)
 * `byDataHook()` — build CSS selector to find element by `data-hook` html attribute. [Examples](./packages/data-hooks/__tests__/byDataHook.spec.ts)
 
-### `@wix/data-hooks-react`
+### `data-hooks-react`
 * `withDataHooks()` – React HOC to wrap your component to pass `dataHooks` with `base` element generator as a prop. [Examples](./packages/data-hooks-react/__tests__/withDataHooks.spec.tsx)
 * `useDataHooks()` – React hook to get `dataHooks` generator. [Examples](./packages/data-hooks-react/__tests__/useDataHooks.spec.ts)
 
-### `@wix/data-hooks-unidriver`
+### `data-hooks-unidriver`
 * `createFinders()` – creates `find()` and `findAll()` methods to find [UniDriver](https://github.com/wix-incubator/unidriver) elements by `data-hook` attribute.
 
 ## Basic Usage (without HOC or React Hooks)
@@ -37,7 +37,7 @@ npm install @wix/data-hooks-unidriver --save-dev
 
 ```typescript
 // Article.dataHooks.ts
-import { dataHooks } from "@wix/data-hooks";
+import { dataHooks } from "data-hooks";
 
 const articleDataHooks = dataHooks<{
   title;
