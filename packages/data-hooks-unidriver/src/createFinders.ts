@@ -8,7 +8,7 @@ export declare type DataHooksFinder<T, DH extends DataHookElements> = {
   };
 };
 
-export function dataHooksFinder<T, DH extends DataHookElements>(
+export function createFinders<T, DH extends DataHookElements>(
   base: UniDriver<T>,
   dataHooks: DataHooks<DH>,
 ): DataHooksFinder<T, DH> {

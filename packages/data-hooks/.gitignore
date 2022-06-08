@@ -1,11 +1,2 @@
 /dist
 node_modules
-*npm-debug.log
-target
-maven
-package-lock.json
-coverage
-typings
-.history
-test/e2e/screenshots
-.yo-rc.json
