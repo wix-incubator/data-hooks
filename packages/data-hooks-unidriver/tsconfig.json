@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es6",
+    "jsx": "react",
+    "lib": ["dom", "esnext"],
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "./__tests__/**/*.tsx?",
+    "./examples/**/*.tsx?"
+  ],
+  "files": [
+    "./src/index.ts"
+  ]
+}

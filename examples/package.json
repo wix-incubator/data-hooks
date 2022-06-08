@@ -14,6 +14,7 @@
   "dependencies": {
     "@wix/data-hooks": "^2.0.0",
     "@wix/data-hooks-react": "^2.0.0",
+    "@wix/data-hooks-unidriver": "^2.0.0",
     "react": "^17.0.2"
   },
   "devDependencies": {
