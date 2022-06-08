@@ -1,5 +1,5 @@
 {
-  "name": "@wix/data-hooks-react",
+  "name": "data-hooks-react",
   "version": "3.0.0",
   "license": "UNLICENSED",
   "author": {
@@ -23,7 +23,7 @@
     "*.{js,ts}": "npm run lint -- --fix"
   },
   "dependencies": {
-    "@wix/data-hooks": "^3.0.0"
+    "data-hooks": "^3.0.0"
   },
   "devDependencies": {
     "@testing-library/react": "^11.2.6",
