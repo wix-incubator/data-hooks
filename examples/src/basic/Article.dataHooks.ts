@@ -1,10 +1,8 @@
-import { dataHooks } from '../../src';
-// In your project:
-// import { dataHooks } from '@wix/data-hooks';
+import { dataHooks } from '@wix/data-hooks';
 
 export const articleDataHooks = dataHooks<{
-  title;
-  description;
+  title: {};
+  description: {};
   author: { id: string };
 }>('article');
 

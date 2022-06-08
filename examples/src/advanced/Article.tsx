@@ -1,6 +1,5 @@
 import React from 'react';
-import { useDataHooks } from '../../src';
-// import { useDataHooks } from '@wix/data-hooks';
+import { useDataHooks } from '@wix/data-hooks';
 import { articleDataHooks } from './Article.dataHooks';
 
 type ArticleProps = {
@@ -15,8 +14,8 @@ export const Article: React.FC<ArticleProps> = ({ dataHook, title, description, 
 
   return (
     <article data-hook={dataHook}>
-      <h1 data-hook={dataHooks.title({})}>{title}</h1> {/* data-hook="article__title */}
-      <p data-hook={dataHooks.description({})}>{description}</p> {/* data-hook="article__description */}
+      <h1 data-hook={dataHooks.title()}>{title}</h1> {/* data-hook="article__title */}
+      <p data-hook={dataHooks.description()}>{description}</p> {/* data-hook="article__description */}
       <ul>
         {authorsList.map((author) => (
           <li
