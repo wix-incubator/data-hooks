@@ -1,0 +1,53 @@
+{
+  "name": "@wix/data-hooks-unidriver",
+  "version": "2.0.0",
+  "license": "UNLICENSED",
+  "author": {
+    "name": "Roman Shevchuk",
+    "email": "romansh@wix.com"
+  },
+  "homepage": "https://github.com/wix-private/data-hooks",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "pre-commit": "lint-staged",
+    "build": "rimraf dist/ && tsc",
+    "test": "echo \"no tests\"",
+    "posttest": "npm run lint",
+    "lint": "eslint ./src"
+  },
+  "lint-staged": {
+    "*.{js,ts}": "npm run lint -- --fix"
+  },
+  "dependencies": {
+    "@wix/data-hooks": "^2.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
+    "eslint": "^8.17.0",
+    "lint-staged": "^10.0.7",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.7.3"
+  },
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
+    "rules": {
+      "@typescript-eslint/no-shadow": "off",
+      "@typescript-eslint/no-explicit-any": "off"
+    }
+  }
+}

@@ -1244,6 +1244,20 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@wix/data-hooks-unidriver@^2.0.0, @wix/data-hooks-unidriver@workspace:packages/data-hooks-unidriver":
+  version: 0.0.0-use.local
+  resolution: "@wix/data-hooks-unidriver@workspace:packages/data-hooks-unidriver"
+  dependencies:
+    "@typescript-eslint/eslint-plugin": ^5.27.1
+    "@typescript-eslint/parser": ^5.27.1
+    "@wix/data-hooks": ^2.0.0
+    eslint: ^8.17.0
+    lint-staged: ^10.0.7
+    rimraf: ^3.0.2
+    typescript: ^4.7.3
+  languageName: unknown
+  linkType: soft
+
 "@wix/data-hooks@^2.0.0, @wix/data-hooks@workspace:packages/data-hooks":
   version: 0.0.0-use.local
   resolution: "@wix/data-hooks@workspace:packages/data-hooks"
@@ -1958,6 +1972,7 @@ __metadata:
     "@unidriver/jsdom-react": ^1.6.3
     "@wix/data-hooks": ^2.0.0
     "@wix/data-hooks-react": ^2.0.0
+    "@wix/data-hooks-unidriver": ^2.0.0
     eslint: ^8.17.0
     jest: ^28.1.1
     jest-environment-jsdom: ^28.1.1

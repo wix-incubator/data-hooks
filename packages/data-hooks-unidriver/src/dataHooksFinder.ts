@@ -1,7 +1,5 @@
 import { UniDriver, UniDriverList } from '@unidriver/core';
-
-import { byDataHook } from './byDataHook';
-import { DataHookElements, DataHooks } from './dataHooks';
+import { byDataHook, DataHookElements, DataHooks } from '@wix/data-hooks';
 
 export declare type DataHooksFinder<T, DH extends DataHookElements> = {
   [Elem in keyof DH]: {
