@@ -1,33 +1,44 @@
 {
-  "name": "data-hooks-examples",
-  "private": true,
+  "name": "@wix/data-hooks-react",
+  "version": "2.0.0",
+  "license": "UNLICENSED",
+  "author": {
+    "name": "Roman Shevchuk",
+    "email": "romansh@wix.com"
+  },
+  "homepage": "https://github.com/wix-private/data-hooks",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "pre-commit": "lint-staged",
-    "build": "echo \"no build\"",
+    "build": "rimraf dist/ && tsc",
     "test": "jest",
     "posttest": "npm run lint",
     "lint": "eslint ./src"
   },
   "lint-staged": {
-    "*.{ts,tsx}": "npm run lint -- --fix"
+    "*.{js,ts}": "npm run lint -- --fix"
   },
   "dependencies": {
-    "@wix/data-hooks": "^2.0.0",
-    "@wix/data-hooks-react": "^2.0.0",
-    "react": "^17.0.2"
+    "@wix/data-hooks": "^2.0.0"
   },
   "devDependencies": {
     "@testing-library/react": "^11.2.6",
     "@types/jest": "^28.1.1",
+    "@types/node": "^14.0.0",
     "@types/react": "^17.0.3",
     "@typescript-eslint/eslint-plugin": "^5.27.1",
     "@typescript-eslint/parser": "^5.27.1",
-    "@unidriver/core": "^1.2.3",
-    "@unidriver/jsdom-react": "^1.6.3",
     "eslint": "^8.17.0",
     "jest": "^28.1.1",
     "jest-environment-jsdom": "^28.1.1",
     "lint-staged": "^10.0.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rimraf": "^3.0.2",
     "ts-jest": "^28.0.4",
     "typescript": "^4.7.3"
   },
@@ -40,6 +51,7 @@
       "^.+\\.tsx?$": "ts-jest"
     },
     "testPathIgnorePatterns": [
+      "<rootDir>/dist/",
       "<rootDir>/node_modules/"
     ]
   },
@@ -56,7 +68,8 @@
       "project": "./tsconfig.json"
     },
     "rules": {
-      "@typescript-eslint/ban-types": "off"
+      "@typescript-eslint/no-shadow": "off",
+      "@typescript-eslint/no-explicit-any": "off"
     }
   }
 }

@@ -1,4 +1,5 @@
-import { dataHooks, useDataHooks } from '../src';
+import { dataHooks } from '@wix/data-hooks';
+import { useDataHooks } from '../src';
 
 describe('useDataHooks hook', () => {
   const cmpDataHooks = dataHooks('cmp');
