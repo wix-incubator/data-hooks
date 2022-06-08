@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "@testing-library/react": "^11.2.6",
+    "@testing-library/react-hooks": "^8.0.0",
     "@types/jest": "^28.1.1",
     "@types/node": "^14.0.0",
     "@types/react": "^17.0.3",
@@ -65,7 +66,7 @@
       "plugin:@typescript-eslint/recommended"
     ],
     "parserOptions": {
-      "project": "./tsconfig.json"
+      "project": "./tsconfig.eslint.json"
     },
     "rules": {
       "@typescript-eslint/no-shadow": "off",
