@@ -1,1 +1,1 @@
-export { dataHooksFinder } from './dataHooksFinder';
+export { createFinders } from './createFinders';
