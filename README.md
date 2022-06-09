@@ -7,10 +7,10 @@ Use the generator to share your dataHooks between components, drivers and tests
 ## Install
 
 ```bash
-npm install data-hooks --save-dev
+npm install data-hooks
 
-# If you need `withDataHooks()` HOC or `useDataHooks()` React Hooks
-npm install data-hooks-react --save-dev
+# To use `withDataHooks()` HOC or `useDataHooks()` React Hooks
+npm install data-hooks-react
 
 # If you need UniDriver finders
 npm install data-hooks-unidriver --save-dev
@@ -31,9 +31,9 @@ npm install data-hooks-unidriver --save-dev
 
 ## Basic Usage (without HOC or React Hooks)
 
-> See the example source code [here](./examples/src/basic)
+> 🤓 See the example source code [here](./examples/src/basic)
 
-> Checkout [advanced example](./examples/src/advanced) to see `dataHooks()`, `withDataHooks()` and `createFinders()` usages
+> 😎 Checkout [advanced example](./examples/src/advanced) to see `dataHooks()`, `withDataHooks()` and `createFinders()` usages
 
 ```typescript
 // Article.dataHooks.ts
