@@ -1,5 +1,5 @@
 {
-  "name": "data-hooks-react",
+  "name": "@wix/data-hooks-react",
   "version": "3.0.0",
   "license": "MIT",
   "author": {
@@ -23,7 +23,7 @@
     "*.{js,ts}": "npm run lint -- --fix"
   },
   "dependencies": {
-    "data-hooks": "^3.0.0"
+    "@wix/data-hooks": "^3.0.0"
   },
   "devDependencies": {
     "@testing-library/react": "^11.2.6",

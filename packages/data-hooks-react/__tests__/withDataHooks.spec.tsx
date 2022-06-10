@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { render } from '@testing-library/react';
 import { withDataHooks, WithDataHooks } from '../src';
-import { dataHooks } from 'data-hooks';
+import { dataHooks } from '@wix/data-hooks';
 
 describe('Data hooks HOC', () => {
   const cmpDataHooks = dataHooks<{ elem: { key: string } }>('cmp');

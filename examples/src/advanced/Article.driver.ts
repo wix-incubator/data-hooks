@@ -1,5 +1,5 @@
 import { UniDriver } from '@unidriver/core';
-import { createFinders } from 'data-hooks-unidriver';
+import { createFinders } from '@wix/data-hooks-unidriver';
 import { articleDataHooks } from './Article.dataHooks';
 
 export const ArticleDriver = <T>(base: UniDriver<T>) => {

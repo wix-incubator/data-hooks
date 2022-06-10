@@ -1,5 +1,5 @@
 {
-  "name": "data-hooks-unidriver",
+  "name": "@wix/data-hooks-unidriver",
   "version": "3.0.0",
   "license": "MIT",
   "author": {
@@ -23,7 +23,7 @@
     "*.{js,ts}": "npm run lint -- --fix"
   },
   "dependencies": {
-    "data-hooks": "^3.0.0"
+    "@wix/data-hooks": "^3.0.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.27.1",

@@ -1243,6 +1243,63 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@wix/data-hooks-react@^3.0.0, @wix/data-hooks-react@workspace:packages/data-hooks-react":
+  version: 0.0.0-use.local
+  resolution: "@wix/data-hooks-react@workspace:packages/data-hooks-react"
+  dependencies:
+    "@testing-library/react": ^11.2.6
+    "@testing-library/react-hooks": ^8.0.0
+    "@types/jest": ^28.1.1
+    "@types/node": ^14.0.0
+    "@types/react": ^17.0.3
+    "@typescript-eslint/eslint-plugin": ^5.27.1
+    "@typescript-eslint/parser": ^5.27.1
+    "@wix/data-hooks": ^3.0.0
+    eslint: ^8.17.0
+    jest: ^28.1.1
+    jest-environment-jsdom: ^28.1.1
+    lint-staged: ^10.0.7
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    rimraf: ^3.0.2
+    ts-jest: ^28.0.4
+    typescript: ^4.7.3
+  languageName: unknown
+  linkType: soft
+
+"@wix/data-hooks-unidriver@^3.0.0, @wix/data-hooks-unidriver@workspace:packages/data-hooks-unidriver":
+  version: 0.0.0-use.local
+  resolution: "@wix/data-hooks-unidriver@workspace:packages/data-hooks-unidriver"
+  dependencies:
+    "@typescript-eslint/eslint-plugin": ^5.27.1
+    "@typescript-eslint/parser": ^5.27.1
+    "@wix/data-hooks": ^3.0.0
+    eslint: ^8.17.0
+    lint-staged: ^10.0.7
+    rimraf: ^3.0.2
+    typescript: ^4.7.3
+  languageName: unknown
+  linkType: soft
+
+"@wix/data-hooks@^3.0.0, @wix/data-hooks@workspace:packages/data-hooks":
+  version: 0.0.0-use.local
+  resolution: "@wix/data-hooks@workspace:packages/data-hooks"
+  dependencies:
+    "@testing-library/react": ^11.2.6
+    "@types/jest": ^28.1.1
+    "@types/node": ^14.0.0
+    "@typescript-eslint/eslint-plugin": ^5.27.1
+    "@typescript-eslint/parser": ^5.27.1
+    eslint: ^8.17.0
+    jest: ^28.1.1
+    jest-environment-jsdom: ^28.1.1
+    lint-staged: ^10.0.7
+    rimraf: ^3.0.2
+    ts-jest: ^28.0.4
+    typescript: ^4.7.3
+  languageName: unknown
+  linkType: soft
+
 "abab@npm:^2.0.5, abab@npm:^2.0.6":
   version: 2.0.6
   resolution: "abab@npm:2.0.6"
@@ -1671,9 +1728,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001349":
-  version: 1.0.30001350
-  resolution: "caniuse-lite@npm:1.0.30001350"
-  checksum: dfdb9eca8ea7b72ea7a581b3036e21c40c5fbd7dc4fc84efaeec166963e68c0e353ef5b9a1af78bd9f63473549b9487a06d2f84fc452fcd43e200209073e2838
+  version: 1.0.30001349
+  resolution: "caniuse-lite@npm:1.0.30001349"
+  checksum: 0095fcbb7ca4ef76227f5c3788c3cdbad3c52a25825c577371ffa73a44d74ff43fc5a849e5fa37c8b4c6237bb5272777085e1f674f9f86fde9aed85201d26f07
   languageName: node
   linkType: hard
 
@@ -1936,9 +1993,9 @@ __metadata:
     "@typescript-eslint/parser": ^5.27.1
     "@unidriver/core": ^1.2.3
     "@unidriver/jsdom-react": ^1.6.3
-    data-hooks: ^3.0.0
-    data-hooks-react: ^3.0.0
-    data-hooks-unidriver: ^3.0.0
+    "@wix/data-hooks": ^3.0.0
+    "@wix/data-hooks-react": ^3.0.0
+    "@wix/data-hooks-unidriver": ^3.0.0
     eslint: ^8.17.0
     jest: ^28.1.1
     jest-environment-jsdom: ^28.1.1
@@ -1954,63 +2011,6 @@ __metadata:
   resolution: "data-hooks-monorepo@workspace:."
   dependencies:
     husky: ^8.0.1
-  languageName: unknown
-  linkType: soft
-
-"data-hooks-react@^3.0.0, data-hooks-react@workspace:packages/data-hooks-react":
-  version: 0.0.0-use.local
-  resolution: "data-hooks-react@workspace:packages/data-hooks-react"
-  dependencies:
-    "@testing-library/react": ^11.2.6
-    "@testing-library/react-hooks": ^8.0.0
-    "@types/jest": ^28.1.1
-    "@types/node": ^14.0.0
-    "@types/react": ^17.0.3
-    "@typescript-eslint/eslint-plugin": ^5.27.1
-    "@typescript-eslint/parser": ^5.27.1
-    data-hooks: ^3.0.0
-    eslint: ^8.17.0
-    jest: ^28.1.1
-    jest-environment-jsdom: ^28.1.1
-    lint-staged: ^10.0.7
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    rimraf: ^3.0.2
-    ts-jest: ^28.0.4
-    typescript: ^4.7.3
-  languageName: unknown
-  linkType: soft
-
-"data-hooks-unidriver@^3.0.0, data-hooks-unidriver@workspace:packages/data-hooks-unidriver":
-  version: 0.0.0-use.local
-  resolution: "data-hooks-unidriver@workspace:packages/data-hooks-unidriver"
-  dependencies:
-    "@typescript-eslint/eslint-plugin": ^5.27.1
-    "@typescript-eslint/parser": ^5.27.1
-    data-hooks: ^3.0.0
-    eslint: ^8.17.0
-    lint-staged: ^10.0.7
-    rimraf: ^3.0.2
-    typescript: ^4.7.3
-  languageName: unknown
-  linkType: soft
-
-"data-hooks@^3.0.0, data-hooks@workspace:packages/data-hooks":
-  version: 0.0.0-use.local
-  resolution: "data-hooks@workspace:packages/data-hooks"
-  dependencies:
-    "@testing-library/react": ^11.2.6
-    "@types/jest": ^28.1.1
-    "@types/node": ^14.0.0
-    "@typescript-eslint/eslint-plugin": ^5.27.1
-    "@typescript-eslint/parser": ^5.27.1
-    eslint: ^8.17.0
-    jest: ^28.1.1
-    jest-environment-jsdom: ^28.1.1
-    lint-staged: ^10.0.7
-    rimraf: ^3.0.2
-    ts-jest: ^28.0.4
-    typescript: ^4.7.3
   languageName: unknown
   linkType: soft
 
@@ -2142,9 +2142,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.147":
-  version: 1.4.148
-  resolution: "electron-to-chromium@npm:1.4.148"
-  checksum: 3730c2eb46c7d0602b418a5a80e8d37e673c61d7cdc6a431a0d23bf08b6db6375c5f842d9e4285549ef2c5bad9189da34f05f28993fdb43920df5befc72db87a
+  version: 1.4.147
+  resolution: "electron-to-chromium@npm:1.4.147"
+  checksum: a714da8ac6842887e98886026b8eeaee0d2fd6d57f5707b0fc2a2916c1b9d026ca8deeef529fd3b069e96f719495a7467b01a508b881fd90d95aa204a7a92000
   languageName: node
   linkType: hard
 
@@ -4034,11 +4034,11 @@ __metadata:
   linkType: hard
 
 "minipass@npm:^3.0.0, minipass@npm:^3.1.1, minipass@npm:^3.1.6":
-  version: 3.2.0
-  resolution: "minipass@npm:3.2.0"
+  version: 3.1.6
+  resolution: "minipass@npm:3.1.6"
   dependencies:
     yallist: ^4.0.0
-  checksum: acaa1d0d596300187a381d8e28bef2cd465285ff8032032a3da323a4a3c6997a7320d586f96cd42b317c758f48620382693ee76a543d2acb4f8ad549648445be
+  checksum: 57a04041413a3531a65062452cb5175f93383ef245d6f4a2961d34386eb9aa8ac11ac7f16f791f5e8bbaf1dfb1ef01596870c88e8822215db57aa591a5bb0a77
   languageName: node
   linkType: hard
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDataHooks } from './useDataHooks';
-import { DataHookElements, DataHooks } from 'data-hooks';
+import { DataHookElements, DataHooks } from '@wix/data-hooks';
 
 export type DataHookElementsFromDH<T extends DataHooks<any>> = T extends DataHooks<infer Item> ? Item : never;
 

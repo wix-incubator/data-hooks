@@ -1,5 +1,5 @@
 import React from 'react';
-import { useDataHooks } from 'data-hooks-react';
+import { useDataHooks } from '@wix/data-hooks-react';
 import { articleDataHooks } from './Article.dataHooks';
 
 type ArticleProps = {

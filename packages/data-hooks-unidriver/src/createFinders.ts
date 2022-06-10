@@ -1,5 +1,5 @@
 import { UniDriver, UniDriverList } from '@unidriver/core';
-import { byDataHook, DataHookElements, DataHooks } from 'data-hooks';
+import { byDataHook, DataHookElements, DataHooks } from '@wix/data-hooks';
 
 type Finders<T, DH extends DataHookElements> = {
   [Elem in keyof DH]: {

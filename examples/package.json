@@ -12,9 +12,9 @@
     "*.{ts,tsx}": "npm run lint -- --fix"
   },
   "dependencies": {
-    "data-hooks": "^3.0.0",
-    "data-hooks-react": "^3.0.0",
-    "data-hooks-unidriver": "^3.0.0",
+    "@wix/data-hooks": "^3.0.0",
+    "@wix/data-hooks-react": "^3.0.0",
+    "@wix/data-hooks-unidriver": "^3.0.0",
     "react": "^17.0.2"
   },
   "devDependencies": {
