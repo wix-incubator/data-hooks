@@ -1,12 +1,12 @@
 {
   "name": "@wix/data-hooks-react",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "license": "MIT",
   "author": {
     "name": "Roman Shevchuk",
     "email": "romansh@wix.com"
   },
-  "homepage": "https://github.com/wix-private/data-hooks",
+  "homepage": "https://github.com/wix/data-hooks",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "files": [

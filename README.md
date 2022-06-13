@@ -1,8 +1,11 @@
 # Typed Data Hooks Generator
 
-A strict typed data hooks generator for your React components.
+> **Data-hook** is a string passed to HTML Element data-hook attribute.
+>
+> Use the **data-hook** attribute to find elements by the string.
 
-Use the generator to share your dataHooks between components, drivers and tests
+
+`@wix/data-hooks` is a generator of data-hooks strings to share them between components, drivers and tests
 
 ## Install
 
@@ -20,7 +23,7 @@ npm install @wix/data-hooks-unidriver --save-dev
 
 ### `@wix/data-hooks`
 * `dataHooks()` — creates data-hooks generator. [Examples](./packages/data-hooks/__tests__/dataHooks.spec.ts)
-* `byDataHook()` — build CSS selector to find element by `data-hook` html attribute. [Examples](./packages/data-hooks/__tests__/byDataHook.spec.ts)
+* `byDataHook()` — builds CSS selector to find elements by `data-hook` html attribute. [Examples](./packages/data-hooks/__tests__/byDataHook.spec.ts)
 
 ### `@wix/data-hooks-react`
 * `withDataHooks()` – React HOC to wrap your component to pass `dataHooks` with `base` element generator as a prop. [Examples](./packages/data-hooks-react/__tests__/withDataHooks.spec.tsx)
@@ -74,6 +77,7 @@ const Article: React.FC = ({dataHook, title, description, authorsList}) => (
 
 ```typescript jsx
 // Article.spec.ts
+import { byDataHook } from "@wix/data-hooks";
 import { render } from '@testing-library/react';
 import { Article } from './Article.tsx';
 import { articleDataHooks } from "./Article.dataHooks.ts";
@@ -90,7 +94,7 @@ describe('<Article/>', () => {
         ]}
       />
     )
-    const selector = `[data-hook~="${articleDataHooks.author()}"]`;
+    const selector = byDataHook(articleDataHooks.author()); // `[data-hook~="article__author"]`
     expect(result.baseElement.querySelectorAll(selector)).toHaveLength(2);
   })
 })
